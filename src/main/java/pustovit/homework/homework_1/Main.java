@@ -117,6 +117,7 @@ public class Main {
         array[9] = (int) doubleB;
         System.out.println(Arrays.toString(array));
         System.out.println();
+        System.out.println();
 
 
     }
