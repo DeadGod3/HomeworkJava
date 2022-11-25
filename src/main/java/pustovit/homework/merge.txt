@@ -1,2 +1,0 @@
-added merge file for merge request
-git add conflict
