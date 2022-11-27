@@ -1,1 +1,1 @@
-git conflict
+git conflict ++
