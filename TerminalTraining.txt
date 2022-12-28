@@ -1,0 +1,42 @@
+
+// Написал пооэтапно что делал с терминалом.
+
+info --> вышел нажав на q
+cd /Users/Ihor/IdeaProjects/
+ls
+ls -la
+pwd
+touch test.txt
+ls
+ls -la
+cp test.txt test1.txt
+ls
+mkdir empty
+ls
+rm -r empty
+ls
+nano text.txt
+ctrl + x, Y ---> сохранил и создал новый файл --> text.txt.save
+ls
+open test.txt --> открылся на маке в блокноте
+ls
+vim test.txt --> забыл как выходить , оффнул терминал, перешёл в директорию по новой ;)
+cd /Users/Ihor/IdeaProjects/
+ls --> Javapro		test.txt	test1.txt	text.txt.save	untitled (Результат комманды ls)
+ls
+rm text.txt.save
+ls --> Javapro		test.txt	test1.txt	untitled
+rm test1.txt
+ls --> Javapro		test.txt	untitled
+chmod 744 test.txt --> ls -la -->  -rwxr--r--   1 Ihor  staff   0 Dec 26 18:31 test.txt
+ls
+rm test.txt
+ls --> Javapro		untitled
+
+
+
+
+
+
+
+
