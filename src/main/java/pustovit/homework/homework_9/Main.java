@@ -91,13 +91,13 @@ public class Main {
                     if (!(scanner.hasNext(login) && scanner.hasNext(password))) {
                         i--;
                         System.out.println("Try again (3 attempts left: ");
-                    } else if (!(scanner.hasNext(login) && scanner.hasNext(password))) {
+                    } else if (!scanner.hasNext(login) && !scanner.hasNext(password)) {
                         i--;
                         System.out.println("Try again (2 attempts left: ");
-                    } else if (!(scanner.hasNext(login) && scanner.hasNext(password))) {
+                    } else if (!scanner.hasNext(login) && !scanner.hasNext(password)) {
                         i--;
                         System.out.println("Try again (1 attempt left: ");
-                    } else if (!(scanner.hasNext(login) && scanner.hasNext(password))) {
+                    } else if (!scanner.hasNext(login) && !scanner.hasNext(password)) {
                         i--;
                         System.out.println("Your limit of attempts has ended! Try again later.");
                         System.exit(0);
