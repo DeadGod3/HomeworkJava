@@ -68,6 +68,7 @@ public class WhatIsNewInJavaVersions {
         };
         System.out.println(result);
 
+//      Текстовые блоки ....
         String text = """
                 text block
                 next line

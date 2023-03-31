@@ -11,6 +11,11 @@ public class Main {
 
 
     public static void main(String[] args) {
+
+        /*
+        ТАК МОЖНО СДЕЛАТЬ ДЛИННЫЙ КОММЕНТ В НЕСКОЛЬКО СТРОК!!!
+         */
+
         Lock lock = new ReentrantLock();
 
         ExecutorService fixedThreadPool = Executors.newFixedThreadPool(2);
@@ -35,8 +40,6 @@ public class Main {
             lock.unlock();
         });
         fixedThreadPool.shutdownNow();
-
-
 
 
         LockClass lockClass = new LockClass();
