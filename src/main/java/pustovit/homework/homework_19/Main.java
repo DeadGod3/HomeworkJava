@@ -53,6 +53,7 @@ public class Main {
 
 
 //        DEADLOCK EXAMPLE :
+        System.out.println();
         DeadLockExample job = new DeadLockExample();
         Thread masha = new Thread(job, "Маша");
         Thread dasha = new Thread(job, "Даша");
