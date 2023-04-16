@@ -5,6 +5,7 @@ out/
 *.iml
 *.xml
 .idea
+/target
 
 
 
