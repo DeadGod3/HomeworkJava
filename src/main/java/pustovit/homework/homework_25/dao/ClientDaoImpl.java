@@ -10,6 +10,9 @@ import pustovit.homework.homework_25.util.HibernateConfiguration;
 import java.util.List;
 
 public class ClientDaoImpl implements ClientDao {
+    //    CAN USE WITHOUT INTERFACE METHOD(INTERFACES) , CAN CREATE ONLY CLASS WITHOUT CONTRACTS!!!
+    //    CAN USE WITHOUT INTERFACE METHOD(INTERFACES) , CAN CREATE ONLY CLASS WITHOUT CONTRACTS!!!
+    //    CAN USE WITHOUT INTERFACE METHOD(INTERFACES) , CAN CREATE ONLY CLASS WITHOUT CONTRACTS!!!
     @Override
     public void save(Client client) {
         SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
@@ -42,15 +45,17 @@ public class ClientDaoImpl implements ClientDao {
         final Session session = sessionFactory.openSession();
         final Transaction transaction = session.beginTransaction();
 
-        final Client client = session.get(Client.class, id);
-
-//        Query query = session.createQuery("from Client where id = 15 ");
-//        List list = query.list();
+        final Query query = session.createNativeQuery(
+                "SELECT * FROM clients WHERE id = :id",
+                Client.class
+        );
+        query.setParameter("id", id);
+        Client clientById = (Client) query.getSingleResult();
 
         transaction.commit();
         session.close();
 
-        return client;
+        return clientById;
 
     }
 
@@ -72,11 +77,30 @@ public class ClientDaoImpl implements ClientDao {
         final Session session = sessionFactory.openSession();
         final Transaction transaction = session.beginTransaction();
 
-        final Client client = session.get(Client.class, phone);
+        final Query query = session.createNativeQuery(
+                "SELECT * FROM clients WHERE phone = :phone",
+                Client.class
+        );
+        query.setParameter("phone", phone);
+        Client clientByPhone = (Client) query.getSingleResult();
 
         transaction.commit();
         session.close();
 
-        return client;
+        return clientByPhone;
     }
+    public List<Client> getAll() {
+        final SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
+        final Session session = sessionFactory.openSession();
+        final Transaction transaction = session.beginTransaction();
+
+        final Query query = session.createNamedQuery("getAll"); // USAGE OF NAMED QUERIES FROM ENTITY CLASS
+        List<Client> clients = query.getResultList(); // COULD PLACE LIST TO GET ALL PROPERTIES
+
+        transaction.commit();
+        session.close();
+
+        return clients;
+    }
+
 }

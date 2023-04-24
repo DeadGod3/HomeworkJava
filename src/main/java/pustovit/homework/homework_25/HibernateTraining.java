@@ -5,7 +5,9 @@ import pustovit.homework.homework_25.model.Client;
 import pustovit.homework.homework_25.service.AccountService;
 import pustovit.homework.homework_25.service.ClientService;
 
-public class Main {
+import java.util.List;
+
+public class HibernateTraining {
     public static void main(String[] args) {
 
         final Client client = new Client();
@@ -33,12 +35,16 @@ public class Main {
 //        clientService.delete(client);
 
 //        Get by ID method :
-//       final Client clientById = clientService.getById(1);
-//        System.out.println(clientById.toString());
+//       Client clientServiceById = clientService.getById(1);
+//        System.out.println(clientServiceById);
 
-//  Get by PHONE method : (Добавить метод для поиска Client по номеру телефона в соответствующий сервис) :??????????
-//        final Client clientByPhone = clientService.getByPhone(380945312);
-//        System.out.println(clientByPhone.toString());
+//        Get by PHONE method :
+//        Client clientServiceByPhone = clientService.getByPhone(380941226);
+//        System.out.println(clientServiceByPhone);
+
+//        Get ALL CLIENTS method :
+        List<Client> allClients = clientService.getAll();
+        System.out.println(allClients);
 
 
     }

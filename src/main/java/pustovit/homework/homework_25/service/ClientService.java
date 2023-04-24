@@ -4,13 +4,15 @@ import pustovit.homework.homework_25.dao.ClientDao;
 import pustovit.homework.homework_25.dao.ClientDaoImpl;
 import pustovit.homework.homework_25.model.Client;
 
+import java.util.List;
+
 public class ClientService {
+    ClientDao clientDao = new ClientDaoImpl();
     public void save(Client client) {
         if (client == null) {
             System.out.println("Client in null.");
         }
         // any other validation..
-        ClientDao clientDao = new ClientDaoImpl();
         clientDao.save(client);
     }
 
@@ -18,27 +20,29 @@ public class ClientService {
         if (client == null) {
             System.out.println("Client in null.");
         }
-        ClientDao clientDao = new ClientDaoImpl();
         clientDao.update(client);
     }
 
-    public Client getById(int id) {
-        ClientDao clientDao = new ClientDaoImpl();
-        // some validation...
+    public Client getById(final int id) {
+        System.out.println("id of the client " + id);
         return clientDao.getById(id);
     }
+
 
     public void delete(Client client) {
         if (client == null) {
             System.out.println("Client in null.");
         }
-        ClientDao clientDao = new ClientDaoImpl();
         clientDao.delete(client);
     }
 
     public Client getByPhone(int phone) {
-        ClientDao clientDao = new ClientDaoImpl();
+        System.out.println("phone of the client " + phone);
         return clientDao.getByPhone(phone);
+    }
+    public List<Client> getAll(){
+        System.out.println("getting all clients");
+        return clientDao.getAll();
     }
 
 }

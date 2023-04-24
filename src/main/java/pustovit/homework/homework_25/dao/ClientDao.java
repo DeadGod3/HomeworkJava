@@ -2,6 +2,8 @@ package pustovit.homework.homework_25.dao;
 
 import pustovit.homework.homework_25.model.Client;
 
+import java.util.List;
+
 public interface ClientDao {
     void save(Client client);
 
@@ -12,5 +14,7 @@ public interface ClientDao {
     void delete(Client client);
 
     Client getByPhone(int phone);
+    List<Client> getAll();
+
 
 }
