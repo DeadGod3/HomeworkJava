@@ -7,10 +7,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>Trap?</title>
+</head>
+<body>
+<h1>It's a trap, obvious...</h1>
+<a href="/trapped">AM I TRAPPED?</a>
+
+<h2>page 4</h2>
+
+
+</body>
 </html>
