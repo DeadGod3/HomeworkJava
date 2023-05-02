@@ -89,6 +89,7 @@ public class ClientDaoImpl implements ClientDao {
 
         return clientByPhone;
     }
+
     public List<Client> getAll() {
         final SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
         final Session session = sessionFactory.openSession();

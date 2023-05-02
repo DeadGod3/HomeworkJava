@@ -3,6 +3,7 @@ package pustovit.homework.homework_25.dao;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import pustovit.homework.homework_25.model.Account;
 import pustovit.homework.homework_25.util.HibernateConfiguration;
 
@@ -43,12 +44,17 @@ public class AccountDaoImpl implements AccountDao {
         final Session session = sessionFactory.openSession();
         final Transaction transaction = session.beginTransaction();
 
-        final Account account = session.get(Account.class, id);
+        final Query query = session.createNativeQuery(
+                "SELECT * FROM accounts WHERE id = :id",
+                Account.class
+        );
+        query.setParameter("id", id);
+        Account accountById = (Account) query.getSingleResult();
 
         transaction.commit();
         session.close();
 
-        return account;
+        return accountById;
     }
 
     @Override

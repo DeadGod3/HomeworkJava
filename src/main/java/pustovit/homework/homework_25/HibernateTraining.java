@@ -43,8 +43,19 @@ public class HibernateTraining {
 //        System.out.println(clientServiceByPhone);
 
 //        Get ALL CLIENTS method :
-        List<Client> allClients = clientService.getAll();
-        System.out.println(allClients);
+//        List<Client> allClients = clientService.getAll();
+//        System.out.println(allClients);
+
+//        Get by ID ( ACCOUNT ) :
+        Account accountServiceById = accountService.getById(15);
+        System.out.println(accountServiceById);
+
+
+//        ERROR AND DEBUG CHECKING FOR CONDITIONS IN METHOD :
+//        account.setNumber("09684122");
+//        account.setValue(13131.234);
+//        account.setClientId(11);
+//        accountService.save(account);
 
 
     }

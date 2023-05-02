@@ -1,9 +1,15 @@
 package pustovit.homework.homework_25.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "statuses")
+@ToString
+@Getter
+@Setter
 public class Status {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,12 +17,4 @@ public class Status {
     private String alias;
     private String description;
 
-    @Override
-    public String toString() {
-        return "Status{" +
-                "id=" + id +
-                ", alias='" + alias + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

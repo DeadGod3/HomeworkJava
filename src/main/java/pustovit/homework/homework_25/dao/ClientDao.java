@@ -14,6 +14,7 @@ public interface ClientDao {
     void delete(Client client);
 
     Client getByPhone(int phone);
+
     List<Client> getAll();
 
 

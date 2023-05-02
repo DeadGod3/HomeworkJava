@@ -28,14 +28,4 @@ public class Client {
     private int phone;
     private String about;
 
-    @Override
-    public String toString() {
-        return "Client{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", phone=" + phone +
-                ", about='" + about + '\'' +
-                '}';
-    }
 }

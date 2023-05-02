@@ -3,11 +3,13 @@ package pustovit.homework.homework_25.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "accounts")
 @Getter
 @Setter
+@ToString
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,13 +19,4 @@ public class Account {
     private String number;
     private double value;
 
-    @Override
-    public String toString() {
-        return "Account{" +
-                "id=" + id +
-                ", clientId=" + clientId +
-                ", number='" + number + '\'' +
-                ", value=" + value +
-                '}';
-    }
 }

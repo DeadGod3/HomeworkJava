@@ -1,7 +1,6 @@
 package pustovit.homework.homework_25.dao;
 
 import pustovit.homework.homework_25.model.Account;
-import pustovit.homework.homework_25.model.Client;
 
 public interface AccountDao {
     void save(Account account);
